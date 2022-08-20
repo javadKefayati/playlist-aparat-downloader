@@ -1,17 +1,13 @@
 import sys
 import list_downloader
 
-
 print("Hello")
 
-is_correct_url=False
-while is_correct_url==False:
-      print("Please enter directory you want to add videos :\n ***Note: your directory must be exist")
-      destination_file =input("Enter path : ")
-      if destination_file[-1]!="/":
-            print("***Your enter url is not correct must be end with /***\n")
-      else:
-            is_correct_url = True
+print("Please enter directory you want to add videos :\n ***Note: your directory must be exist")
+
+destination_file =input("Enter path : ")
+if destination_file[-1]!="/":
+      destination_file += "/"
 
 print("please choose between url playlist or id playlist???\n1-url\n2-id")
 choos_way =input("Enter a number : ") 
