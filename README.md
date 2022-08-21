@@ -1,2 +1,2 @@
 # playlist-aparat-downloader
-auto download play list from aparat
+auto download playlist from aparat
