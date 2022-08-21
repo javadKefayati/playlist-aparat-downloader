@@ -1,13 +1,22 @@
 import sys
 import list_downloader
+import os
+from time import time
 
 print("Hello")
+
+start = time()
 
 print("Please enter directory you want to add videos :\n ***Note: your directory must be exist")
 
 destination_file =input("Enter path : ")
 if destination_file[-1]!="/":
       destination_file += "/"
+
+# Create target Directory if don't exist
+if not os.path.exists(destination_file):
+      os.mkdir(destination_file)
+
 
 print("please choose between url playlist or id playlist???\n1-url\n2-id")
 choos_way =input("Enter a number : ") 
@@ -24,3 +33,4 @@ print("Please choose between quality:\n0 : 144p,\n1 : 240p,\n2 : 360p,\n3 : 480p
 quality_number = input("Enter a number :")
 
 list_downloader.Downloader(url,destination_file,int(quality_number))
+print(f'Time taken: %s' ,time() - start)
