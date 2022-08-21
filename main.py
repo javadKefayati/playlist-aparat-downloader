@@ -33,4 +33,4 @@ print("Please choose between quality:\n0 : 144p,\n1 : 240p,\n2 : 360p,\n3 : 480p
 quality_number = input("Enter a number :")
 
 list_downloader.Downloader(url,destination_file,int(quality_number))
-print(f'Time taken: %s' ,time() - start)
+print('Time taken: ' ,time() - start)
